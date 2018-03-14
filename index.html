@@ -1,0 +1,34 @@
+<script type="text/javascript">
+	var i =0;
+	var images = [];
+	var time = 2000;
+
+	images[0]='auto.jpg';
+	images[1]='background.jpg';
+	images[2]='clock.jpg';
+	images[3]='developer.jpg';
+	images[4]='fireworks.jpg';
+	images[5]='goal.jpg';
+	images[6]='mountain.jpg';
+	images[7]='snow.jpg';
+	images[8]='architecture.jpg';
+	images[9]='watchtower.jpg';
+
+	function changeImg() {
+		document.slide.src = images[i];
+
+		if(i<images.length - 1){
+			i++;
+		}
+		 else
+		{
+			i=0;
+		}
+		
+	setTimeout("changeImg()",time);
+	}
+
+	window.onload =changeImg;
+</script>
+
+<img name="slide" width="100%" height="100%">
